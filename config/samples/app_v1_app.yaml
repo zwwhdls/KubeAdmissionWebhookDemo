@@ -1,0 +1,19 @@
+apiVersion: app.o0w0o.cn/v1
+kind: App
+metadata:
+  name: app-sample
+spec:
+  # Add fields here
+  deploy:
+    selector:
+      matchLabels:
+        app: app-sample
+    template:
+      metadata:
+        name: sample
+        labels:
+          app: app-sample
+      spec:
+        containers:
+          - name: cn
+            image: daocloud.io/library/redis:4.0.14-alpine

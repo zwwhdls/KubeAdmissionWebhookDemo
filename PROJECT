@@ -1,0 +1,7 @@
+version: "2"
+domain: o0w0o.cn
+repo: zww-app
+resources:
+- group: app
+  version: v1
+  kind: App
