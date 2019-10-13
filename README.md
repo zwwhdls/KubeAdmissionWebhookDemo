@@ -114,7 +114,7 @@ func (r *App) Default() {
 
 ```bash
 $ openssl genrsa -out ca.key 2048
-$ openssl req -x509 -new -nodes -key ca.key -subj "/CN=10.8.1.61" -days 10000 -out ca.crt
+$ openssl req -x509 -new -nodes -key ca.key -subj "/CN=<server_ip>" -days 10000 -out ca.crt
 $ openssl genrsa -out server.key 2048
 $ cat << EOF >csr.conf
 > [ req ]
