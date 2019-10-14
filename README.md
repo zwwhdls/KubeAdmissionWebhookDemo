@@ -106,6 +106,8 @@ func (r *App) Default() {
 
 ### 配置 Server Path
 
+本文仅分享本地开发测试的调试方案，线上部署方案请参考[官方文档](https://book.kubebuilder.io/cronjob-tutorial/running.html)。
+
 第一步，配置 Server Path；将 service 去掉，换成 `url: https://<server_ip>:9443/mutate-app-o0w0o-cn-v1-app` ，其中 `server_ip` 是 Webhook Server 的 ip，如果运行在本地，就是本地的 ip。需要注意的是 url 中的 path 要与 `app_webhook.go` 中定义的保持一致。
 
 ### 配置证书
